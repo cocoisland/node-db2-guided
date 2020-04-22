@@ -139,9 +139,9 @@ knex migrate:rollback
 
 Use Knex migrations to create a products table with the following columns:
 
-. id: make this the primary key.
-. name: should be a string that is unique.
-. price: should be a number.
+* id: make this the primary key.
+* name: should be a string that is unique.
+* price: should be a number.
 
 ### Learn to create and use knex seeds
 In this module we’ll learn how to create and run knex seeds.
