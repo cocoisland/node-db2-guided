@@ -10,17 +10,16 @@ Initializing Knex
 
 npm install knex sqlite3
 
-We’ve seen how to use manually create a config object to get started with Knex, but the best practice is to use the following command:
+> We’ve seen how to use manually create a config object to get started with Knex, but the best practice is to use the following command:
 
-Copy
 knex init
-Or, if Knex isn’t globally installed:
+> Or, if Knex isn’t globally installed:
 
-Copy
+
 npx knex init
-This command will generate a file in your root folder called knexfile.js. It will be auto populated with three config objects, based on different environments. We can delete all except for the development object.
+> This command will generate a file in your root folder called knexfile.js. It will be auto populated with three config objects, based on different environments. We can delete all except for the development object.
 
-Copy
+```
 module.exports = {
 
   development: {
@@ -31,9 +30,11 @@ module.exports = {
   }
 
 };
-We’ll need to update the location (or desired location) of the database as well as add the useNullAsDefault option. The latter option prevents crashes when working with sqlite3.
+```
 
-Copy
+> We’ll need to update the location (or desired location) of the database as well as add the useNullAsDefault option. The latter option prevents crashes when working with sqlite3.
+
+```
 module.exports = {
 
   development: {
@@ -48,12 +49,11 @@ module.exports = {
   }
 
 };
-Now, wherever we configure our database, we may use the following syntax instead of hardcoding in a config object.
+```
+> Now, wherever we configure our database, we may use the following syntax instead of hardcoding in a config object.
+> const knex = require('knex');
 
-Copy
-const knex = require('knex');
-
-const config = require('../knexfile.js');
+> const config = require('../knexfile.js');
 
 // we must select the development object from our knexfile
 const db = knex(config.development);
