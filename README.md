@@ -1,20 +1,12 @@
-# DB II Guided Project
 
-Guided project **DB II** Module.
-
-## Prerequisites
-
-- [SQLite Studio](https://sqlitestudio.pl/index.rvt?act=download) installed.
-- a REST client alike [Insomnia](https://insomnia.rest/download/) or [Postman](https://www.getpostman.com/downloads/) installed.
-- create a free account for [DB Designer](https://dbdesigner.net).
-
-Knex Cli
-To use migrations (and to make Knex setup easier), we need to use knex cli. Install knex globally with npm install -g knex.
-
-This allows you to use Knex commands within any repo that has knex as a local dependency. If you have any issues with this global install, you can use the npx knex command instead.
+##Knex Cli
+> To use migrations (and to make Knex setup easier), we need to use knex cli. 
+>Install knex globally with npm install -g knex.
+> This allows you to use Knex commands within any repo that has knex as a local dependency. 
+> If you have any issues with this global install, you can use the npx knex command instead.
 
 Initializing Knex
-To start, add the knex and sqlite3 libraries to your repository.
+> To start, add the knex and sqlite3 libraries to your repository.
 
 npm install knex sqlite3
 
